@@ -37,6 +37,8 @@ class Solution {
             default: return 0;
         }
     }
+    
 }
+
 // @lc code=end
 
