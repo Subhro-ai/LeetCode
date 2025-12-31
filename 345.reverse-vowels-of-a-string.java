@@ -11,28 +11,28 @@ import java.util.Deque;
 // @lc code=start
 class Solution {
     public String reverseVowels(String s) {
-        StringBuilder v = new StringBuilder();
-        Deque<Character> stack = new ArrayDeque<>();
-        for (int i = 0; i < s.length(); i++) {
-            char c = s.charAt(i);
-            if(isVowel(c)){
-                stack.push(c);
-            }
+        char[] res = s.toCharArray();
+        int left = 0;
+        int right = s.length() - 1;
+        while(right >= left) {
+            if (!isVowel(res[left])) {
+            left++;
+        } else if (!isVowel(res[right])) {
+            right--;
+        } else {
+            char temp = res[left];
+            res[left] = res[right];
+            res[right] = temp;
+            left++;
+            right--;
+        }   
         }
-        for (int i = 0; i < s.length(); i++) {
-            char c = s.charAt(i);
-            if(isVowel(c)) {
-                v.append(stack.pop());
-            } else {
-                v.append(c);
-            }
-        }
-        return v.toString();
+        return new String(res);
     }
 
     public static boolean isVowel(char c) {
     return "aeiouAEIOU".indexOf(c) != -1;
-}
+    }
 }
 // @lc code=end
 
