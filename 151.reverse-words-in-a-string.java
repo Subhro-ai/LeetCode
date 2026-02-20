@@ -5,22 +5,6 @@
  */
 
 // @lc code=start
-<<<<<<< HEAD
-
-import java.util.ArrayDeque;
-
-class Solution {
-    public String reverseWords(String s) {
-        Deque<String> stack = new ArrayDeque<>();
-        String word;
-        for (int i = 0; i < s.length(); i++) {
-            char c = s.charAt(i);
-            if( c == ' ' ) continue;
-            else {
-                
-            }
-        }
-=======
 class Solution {
     public String reverseWords(String s) {
         s = s.trim().replaceAll("\\s+", " ");
@@ -35,8 +19,6 @@ class Solution {
             }
         }
         return res.toString();
->>>>>>> refs/remotes/origin/main
     }
 }
 // @lc code=end
-
