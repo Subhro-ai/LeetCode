@@ -17,7 +17,7 @@ class Solution {
                 }
             }
         }
-        return strs[0];
+        return "";
     }
 }
 // @lc code=end
